@@ -32,6 +32,13 @@
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#e74c3c">
+    
+    <!-- Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SpecOfColor">
+    <meta name="format-detection" content="telephone=no">
     <style>
         * {
             margin: 0;
@@ -340,23 +347,185 @@
     }
 
     /* Responsive design */
+    
+    /* Large tablets and small desktops */
+    @media (max-width: 1024px) {
+        .container {
+            padding: 15px;
+        }
+        
+        .gallery {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .stats {
+            gap: 30px;
+        }
+    }
+    
+    /* Tablets */
     @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+        
+        .header {
+            padding: 25px 20px;
+            margin-bottom: 25px;
+        }
+        
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
         .stats {
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
         }
         
         .nav {
             flex-direction: column;
             align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
         }
         
-        .title {
-            font-size: 2rem;
+        .nav-item {
+            padding: 12px 25px;
+            font-size: 0.95rem;
         }
         
         .gallery {
             grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-item {
+            height: 220px;
+        }
+        
+        .contact {
+            padding: 30px 20px;
+        }
+        
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-text {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+    }
+    
+    /* Mobile phones */
+    @media (max-width: 480px) {
+        .container {
+            padding: 8px;
+        }
+        
+        .header {
+            padding: 20px 15px;
+            border-radius: 20px;
+        }
+        
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            font-size: 1.5rem;
+        }
+        
+        .title {
+            font-size: 1.8rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+        }
+        
+        .nav-item {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            width: 200px;
+            text-align: center;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 15px;
+        }
+        
+        .gallery-content {
+            padding: 15px;
+        }
+        
+        .contact {
+            padding: 25px 15px;
+            border-radius: 20px;
+        }
+        
+        .contact-title {
+            font-size: 1.6rem;
+        }
+        
+        .contact-text {
+            font-size: 0.95rem;
+        }
+        
+        .cta-button {
+            padding: 12px 30px;
+            font-size: 1rem;
+        }
+    }
+    
+    /* Small mobile phones */
+    @media (max-width: 360px) {
+        .title {
+            font-size: 1.6rem;
+        }
+        
+        .profile-image {
+            width: 70px;
+            height: 70px;
+            font-size: 1.3rem;
+        }
+        
+        .nav-item {
+            width: 180px;
+            padding: 8px 15px;
+        }
+        
+        .contact-title {
+            font-size: 1.4rem;
         }
     }
 
@@ -613,6 +782,8 @@
     }
 
     /* Form responsive design */
+    
+    /* Tablets */
     @media (max-width: 768px) {
         .form-grid {
             grid-template-columns: 1fr;
@@ -626,12 +797,15 @@
         .form-group input,
         .form-group select,
         .form-group textarea {
-            padding: 12px 16px;
+            padding: 14px 18px;
+            font-size: 1rem;
+            border-radius: 12px;
         }
 
         .modal-content {
             width: 95%;
-            max-height: 95vh;
+            max-height: 90vh;
+            border-radius: 20px;
         }
 
         .modal-header {
@@ -639,18 +813,144 @@
         }
 
         .modal-header h2 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+        }
+        
+        .modal-close {
+            width: 35px;
+            height: 35px;
+            font-size: 1.8rem;
         }
 
         .form-actions {
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
+            margin-top: 25px;
         }
 
         .btn-secondary,
         .form-actions .cta-button {
             width: 100%;
             text-align: center;
+            padding: 14px 20px;
+            font-size: 1rem;
+        }
+        
+        .form-message {
+            padding: 25px 20px;
+            margin-top: 15px;
+        }
+    }
+    
+    /* Mobile phones */
+    @media (max-width: 480px) {
+        .contact-form {
+            padding: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 5px;
+        }
+        
+        .form-group label {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            /* Improve touch targets */
+            min-height: 44px;
+        }
+        
+        .form-group textarea {
+            min-height: 80px;
+        }
+
+        .modal-content {
+            width: 98%;
+            max-height: 95vh;
+            border-radius: 15px;
+        }
+
+        .modal-header {
+            padding: 15px 15px 12px;
+        }
+
+        .modal-header h2 {
+            font-size: 1.4rem;
+        }
+        
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            font-size: 1.6rem;
+        }
+
+        .form-grid {
+            gap: 15px;
+        }
+
+        .form-actions {
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-secondary,
+        .form-actions .cta-button {
+            padding: 12px 18px;
+            font-size: 0.95rem;
+            min-height: 44px;
+        }
+        
+        .form-message {
+            padding: 20px 15px;
+        }
+        
+        .form-message h3 {
+            font-size: 1.3rem;
+        }
+        
+        .form-message p {
+            font-size: 0.9rem;
+        }
+    }
+    
+    /* Small mobile phones */
+    @media (max-width: 360px) {
+        .modal-content {
+            width: 100%;
+            max-height: 100vh;
+            border-radius: 0;
+        }
+        
+        .contact-form {
+            padding: 12px;
+        }
+        
+        .modal-header {
+            padding: 12px;
+        }
+        
+        .modal-header h2 {
+            font-size: 1.2rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px 12px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-secondary,
+        .form-actions .cta-button {
+            padding: 10px 15px;
+            font-size: 0.9rem;
         }
     }
 
@@ -834,64 +1134,130 @@
 </div>
 
 <script>
-    // Create animated particles
+    // Create animated particles (mobile-optimized)
     function createParticles() {
         const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 50; i++) {
+        // Reduce particle count on mobile for better performance
+        const particleCount = isMobileDevice() ? 25 : 50;
+        
+        for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
             particle.style.animationDelay = Math.random() * 6 + 's';
             particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            
+            // Enable hardware acceleration for better mobile performance
+            particle.style.willChange = 'transform';
+            particle.style.transform = 'translate3d(0, 0, 0)';
+            
             particlesContainer.appendChild(particle);
         }
     }
 
-    // Magnetic effect for navigation
+    // Mobile-friendly navigation effects
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+               window.innerWidth <= 768;
+    }
+
     document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('mousemove', (e) => {
-            const rect = item.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+        if (!isMobileDevice()) {
+            // Desktop magnetic effect
+            item.addEventListener('mousemove', (e) => {
+                const rect = item.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                item.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+            });
             
-            item.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
-        });
-        
-        item.addEventListener('mouseleave', () => {
-            item.style.transform = 'translate(0px, 0px) scale(1)';
-            item.style.transition = 'transform 0.3s ease';
-        });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translate(0px, 0px) scale(1)';
+                item.style.transition = 'transform 0.3s ease';
+            });
+        } else {
+            // Mobile touch feedback
+            item.addEventListener('touchstart', () => {
+                item.style.transform = 'scale(0.95)';
+                item.style.transition = 'transform 0.1s ease';
+            });
+            
+            item.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    item.style.transform = 'scale(1)';
+                    item.style.transition = 'transform 0.2s ease';
+                }, 100);
+            });
+        }
     });
 
     // Gallery item interaction
     document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-            item.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                item.style.transform = 'translateY(-10px) rotateX(5deg)';
-            }, 150);
-        });
+        if (isMobileDevice()) {
+            // Mobile-optimized gallery interaction
+            item.addEventListener('touchstart', () => {
+                item.style.transform = 'scale(0.98)';
+                item.style.transition = 'transform 0.1s ease';
+            });
+            
+            item.addEventListener('touchend', () => {
+                item.style.transform = 'scale(1)';
+                item.style.transition = 'transform 0.3s ease';
+            });
+        } else {
+            // Desktop interaction
+            item.addEventListener('click', () => {
+                item.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    item.style.transform = 'translateY(-10px) rotateX(5deg)';
+                }, 150);
+            });
+        }
     });
 
-    // Modal functions
+    // Modal functions (mobile-optimized)
     function openContactModal() {
         const modal = document.getElementById('contactModal');
         modal.classList.remove('hidden');
-        setTimeout(() => {
+        
+        // Use requestAnimationFrame for smoother animations
+        requestAnimationFrame(() => {
             modal.classList.add('show');
-        }, 10);
+        });
+        
+        // Prevent body scrolling on mobile
         document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        
+        // Store scroll position for mobile
+        if (isMobileDevice()) {
+            window.scrollPosition = window.pageYOffset;
+            document.body.style.top = `-${window.scrollPosition}px`;
+        }
     }
 
     function closeContactModal() {
         const modal = document.getElementById('contactModal');
         modal.classList.remove('show');
+        
         setTimeout(() => {
             modal.classList.add('hidden');
             resetForm();
+            
+            // Restore body scrolling
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
+            
+            // Restore scroll position on mobile
+            if (isMobileDevice() && window.scrollPosition !== undefined) {
+                window.scrollTo(0, window.scrollPosition);
+            }
         }, 300);
-        document.body.style.overflow = '';
     }
 
     // Close modal on Escape key
@@ -970,15 +1336,35 @@
         }
     });
 
-    // Parallax effect on scroll
-    window.addEventListener('scroll', () => {
+    // Optimized parallax effect for mobile
+    let ticking = false;
+    
+    function updateParallax() {
         const scrolled = window.pageYOffset;
         const parallax = scrolled * 0.5;
         
-        document.querySelectorAll('.particle').forEach((particle, index) => {
-            const speed = (index % 3 + 1) * 0.1;
-            particle.style.transform = `translateY(${parallax * speed}px)`;
-        });
+        // Reduce particle count on mobile for better performance
+        const particles = document.querySelectorAll('.particle');
+        const particleCount = isMobileDevice() ? Math.min(particles.length, 20) : particles.length;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = particles[i];
+            if (particle) {
+                const speed = (i % 3 + 1) * 0.1;
+                // Use transform3d for better mobile performance
+                particle.style.transform = `translate3d(0, ${parallax * speed}px, 0)`;
+            }
+        }
+        
+        ticking = false;
+    }
+    
+    // Throttled scroll for better performance
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
     });
 
     // Initialize particles when page loads
