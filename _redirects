@@ -1,0 +1,9 @@
+# Netlify redirects file
+# All routes should serve the main index.html file
+/*    /index.html   200
+
+# Optional: Redirect common paths to sections
+/portfolio    /index.html#portfolio    200
+/about        /index.html#about        200
+/services     /index.html#services     200
+/contact      /index.html#contact      200
