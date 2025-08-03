@@ -106,13 +106,23 @@ The `netlify.toml` file includes:
 - Structured data ready
 - Performance optimized
 
-## 📞 Contact Integration
+## 📞 Contact Form
 
-The contact button currently shows an alert. To integrate with a real contact form:
+The site includes a fully functional contact form with:
 
-1. **Netlify Forms**: Add `netlify` attribute to a form
-2. **Email Integration**: Link to mailto: or contact service
-3. **Third-party Forms**: Integrate with Typeform, Google Forms, etc.
+1. **Netlify Forms Integration**: Automatically processes form submissions
+2. **Spam Protection**: Honeypot field to prevent bot submissions
+3. **Form Validation**: Real-time validation for required fields
+4. **Professional Fields**: Name, email, phone, session type, message, and preferred dates
+5. **Success/Error Handling**: User-friendly feedback messages
+6. **Mobile Responsive**: Optimized for all device sizes
+
+### Form Features:
+- **Automatic Email Notifications**: Netlify sends form submissions to your email
+- **Form Validation**: Client-side validation with visual feedback
+- **Session Type Selection**: Pre-defined photography session types
+- **Professional Layout**: Two-column grid layout on desktop
+- **Loading States**: Button shows "Sending..." during submission
 
 ## 🎨 Animation Features
 
